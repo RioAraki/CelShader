@@ -2,16 +2,15 @@
 
 ## Introduction
 
-In CSC418, the topic I am interested the most is the shader part. As a video game fan, I realized how shader could play an important role in the visual. After studying the basic shader knowledge with GLSL, I plan to create some decent effect with shader written by my own. In detail, I would like to try to create an effect of the latest Zelda game -- Breath of the wild, especially how their characters looks. Please refer to the image I 
+In CSC418, the topic I am interested the most is the shader part. As a video game fan, I realized how shader could play an important role in the visual. After studying the basic shader knowledge with GLSL, I plan to create some decent effect with shader written by my own. In detail, I would like to try to create an effect of the latest Zelda game -- Breath of the wild, especially how their characters looks. Please refer to the image:
 
-![botw_img](http://static.gosunoob.com/img/1/2017/03/zelda-breath-of-the-wild-guides-2.jpg)
-![botw_img2](https://nintendosoup.com/wp-content/uploads/2017/06/legendofzelda_botw_ss_3-1038x576.jpg)
+![botw_img](https://github.com/RioAraki/CelShader/blob/master/botw.jpg)
 
 All characters in the game are with really sharp texture and simple shadow, either bright or shaded and the overall tone has a bright color. These combined together create a really gorgerous cartoonic style. After some research, I found the visual effect is closest to the terminology called cel shading or toon shading. 
 
 ## Cel shading (https://en.wikipedia.org/wiki/Cel_shading)
 
-Cel shading is actually a type of non-photorealistic rendering technique, which uses less shading color instead of a shade gradient or tints and shades. On a more technical side, a typical cel shading is achieved three main components: shade, outlines and glowing rim. Shade part is done by comparing the light direction and surface normal's direction. If the relative consine is smaller than certain threshold we get a brighter and if the angle between two directions are quite large we get a shade. The outline could be done by postprocessed with edge detection techniques such as sobel filter. Lastly, the rim is added depends on how close it is to the edge and the relative position of it with 
+Cel shading is actually a type of non-photorealistic rendering technique, which uses less shading color instead of a shade gradient or tints and shades. On a more technical side, a typical cel shading is achieved three main components: shade, outlines and glowing rim. Shade part is done by comparing the light direction and surface normal's direction. If the relative consine is smaller than certain threshold we get a brighter and if the angle between two directions are quite large we get a shade. The outline could be done by postprocessed with edge detection techniques such as sobel filter. Lastly, the rim is added depends on how close it is to the edge and the relative position of the edge.
 
 Some relative works I referred are:
 https://raulreyesfinalproject.files.wordpress.com/2012/12/dissertation_cell-shading-raul_reyes_luque.pdf - gave me a lot of conceptual overview for cel shading
@@ -23,7 +22,11 @@ http://gad.qq.com/article/detail/26461 - Some reference on unity shader language
 
 ## Environment - Unity Game Engine
 
-In order to focus on the shader part rather than build everything from scratch, **I used Unity game engine to help me deal with all other things except shader. That is to say, only the cel_shader.shader and lightchange.cs files is my delta work, other things are mostly build with the resources I already have.** Unity is a professional game engine which could handle almost all aspects relate to the game. With the help of unity, I could import the model and build the scene really quickly and decently as this is not my focus. I could also write some scripts to move the camera based on user's input, so that the demo is more interactive. Lastly, **Unity has its own shader programming language called "ShaderLab" and the actual shader code is written in a variant of CG / HLSL language.** This enables me to customize the shader to the effect I would like to use.
+In order to focus on the shader part rather than build everything from scratch. 
+
+**I used Unity game engine to help me deal with all other things except shader. That is to say, only the `cel_shader.shader` and `lightchange.cs` files are my delta work, other things are mostly built by unity or downloaded online.** 
+
+Unity is a professional game engine which could handle almost all aspects relate to the game. With the help of unity, I could import the model and build the scene really quickly and decently as this is not my focus. I could also write some scripts to move the camera based on user's input, so that the demo is more interactive. Lastly, **Unity has its own shader programming language called "ShaderLab" and the actual shader code is written in a variant of CG / HLSL language.** This enables me to customize the shader to the effect I would like to use.
 
 ## Syntax of the "shaderLab" programming language
 
@@ -58,9 +61,9 @@ I downloaded several models from https://www.turbosquid.com/Search/3D-Models/fre
 
 The final output is a short animation showing the cel shader and rotation of light. I attach two screenshots and one comparison for statis image and gif for demonstration.
 
-![output_1](output1.png)
-![output_2](output2.png)
-![cel_shading](cel_shading.png)
-![output_gif](output_gif.gif)
+![output_1](https://github.com/RioAraki/CelShader/blob/master/output1.png)
+![output_2](https://github.com/RioAraki/CelShader/blob/master/output2.png)
+![cel_shading](https://github.com/RioAraki/CelShader/blob/master/cel_shading.png)
+![output_gif](https://github.com/RioAraki/CelShader/blob/master/output_gif.gif)
 
 I also include the whole unity project inside for people to reproduce my work, and all codes I wrote explicitly for the project, which are `CelShader.shader` and `lightChange.cs`.
