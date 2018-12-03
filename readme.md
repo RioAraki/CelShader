@@ -1,4 +1,4 @@
-# Final image competition: cel shading
+# Final image competition: Cel shading
 
 ## Introduction
 
