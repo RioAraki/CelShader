@@ -66,4 +66,4 @@ The final output is a short animation showing the cel shader and rotation of lig
 ![cel_shading](https://github.com/RioAraki/CelShader/blob/master/cel_shading.png)
 ![output_gif](https://github.com/RioAraki/CelShader/blob/master/output_gif.gif)
 
-I also include the whole unity project in this [link]() for people to reproduce my work as it is too big to upload on markus, and all codes I wrote explicitly for the project in `source.zip`, which are `CelShader.shader` and `lightChange.cs`.
+I also include the whole unity project in this [link](https://github.com/RioAraki/CelShader/tree/master/TestShader) for people to reproduce my work as it is too big to upload on markus, and all codes I wrote explicitly for the project in `source.zip`, which are `CelShader.shader` and `lightChange.cs`.
