@@ -23,7 +23,7 @@ http://gad.qq.com/article/detail/26461 - Some reference on unity shader language
 
 ## Environment - Unity Game Engine
 
-In order to focus on the shader part rather than build everything from scratch, I used Unity game engine to help me deal with all other things except shader. Unity is a professional game engine which could handle almost all aspects relate to the game. With the help of unity, I could import the model and build the scene really quickly and decently as this is not my focus. I could also write some scripts to move the camera based on user's input, so that the demo is more interactive. Lastly, **Unity has its own shader programming language called "ShaderLab" and the actual shader code is written in a variant of CG / HLSL language.** This enables me to customize the shader to the effect I would like to use.
+In order to focus on the shader part rather than build everything from scratch, **I used Unity game engine to help me deal with all other things except shader. That is to say, only the cel_shader.shader and lightchange.cs files is my delta work, other things are mostly build with the resources I already have.** Unity is a professional game engine which could handle almost all aspects relate to the game. With the help of unity, I could import the model and build the scene really quickly and decently as this is not my focus. I could also write some scripts to move the camera based on user's input, so that the demo is more interactive. Lastly, **Unity has its own shader programming language called "ShaderLab" and the actual shader code is written in a variant of CG / HLSL language.** This enables me to customize the shader to the effect I would like to use.
 
 ## Syntax of the "shaderLab" programming language
 
@@ -63,4 +63,4 @@ The final output is a short animation showing the cel shader and rotation of lig
 ![cel_shading](cel_shading.png)
 ![output_gif](output_gif.gif)
 
-I also include the whole unity project inside for people to reproduce my work, and all codes I wrote explicitly for the project.
+I also include the whole unity project inside for people to reproduce my work, and all codes I wrote explicitly for the project, which are `CelShader.shader` and `lightChange.cs`.
